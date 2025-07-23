@@ -1,6 +1,6 @@
-# 🧹 Dataset Cleaning with NumPy and Pandas 🐼
+# Exploratory Data Analysis & Machine Learning Projects 
 
-This repository showcases practical examples of **Data Cleaning and Preprocessing** using Python libraries — **NumPy** and **Pandas** — on real-world datasets.
+This repository demonstrates end-to-end Exploratory Data Analysis (EDA) and Machine Learning workflows, focusing on data cleaning, visualization, preprocessing, and model building using Python libraries like **Pandas**, **NumPy**, **Seaborn**, and **Scikit-learn**.
 
 ---
 
@@ -18,14 +18,21 @@ This repository showcases practical examples of **Data Cleaning and Preprocessin
 
 ## 🛠️ Technologies Used
 
-- 🐍 Python 3
-- 📊 Pandas
-- ➕ NumPy
-- 📓 Jupyter Notebook
+- 🐍 Python 3 – Core programming language used for data analysis and machine learning
+
+- 📊 Pandas – Data manipulation and analysis (DataFrames, cleaning, exploration)
+
+- ➕ NumPy – Numerical operations and array processing
+
+- 📈 Matplotlib & Seaborn – Data visualization and statistical plotting
+
+- 📓 Jupyter Notebook – Interactive coding environment for exploratory workflows
+
+- 🧠 Scikit-learn – Machine learning algorithms and model evaluation tools
 
 ---
 
-## 🧼 Steps for Data Cleaning
+### 🧼 Steps for Data Cleaning
 
 The following common steps were applied across datasets using **NumPy** and **Pandas**:
 
@@ -93,3 +100,21 @@ The following common steps were applied across datasets using **NumPy** and **Pa
 - Example:
   ```python
   auto.Horsepower=auto.Horsepower.astype(float)
+
+**NOTE**: Before Plotting to the data visualization we have to known which one is ouput column, to identify we have see dataset from UCI learning website and find a word called **target** written in **Role** column...
+**⭐ Some Rules To be Followed before plotting...**
+<li>If the output is string or object or Integer like Eg - Male/Female, 0/1, 0/1/2, Yes/No then the output is of <b>Categorical</b> type </li>
+<li>If the output is float values or continuous type values like 2.4,2.6,2.9,3.5,3.8.... then the output is <b>Continuous</b> type </li>
+<li>After deciding the output is of which type now compare the remaing input values is of which types.. Let say if input datatype is int and output datatype is object then it will be Categorical and Categorical.. </li>
+<li><img width="917" height="746" alt="image" src="https://github.com/user-attachments/assets/44eeb3cb-44d2-4a7e-8568-530a1ed529a7" /></li>
+
+### 🧼 Steps for Data Visualization
+
+
+
+The following common steps were applied across datasets using **Matplotlib** and **Seaborn**:
+
+
+
+
+
