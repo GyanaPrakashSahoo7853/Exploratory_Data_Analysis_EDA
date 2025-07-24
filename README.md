@@ -101,14 +101,63 @@ The following common steps were applied across datasets using **NumPy** and **Pa
   ```python
   auto.Horsepower=auto.Horsepower.astype(float)
 
-**NOTE**: Before Plotting to the data visualization we have to known which one is ouput column, to identify we have see dataset from UCI learning website and find a word called **target** written in **Role** column...
+ ### ❇️ Data Visualization 
+**NOTE**: Before Plotting to the data visualization we have to known which one is output column, to identify we have see dataset from UCI learning website and find a word called **target** written in **Role** column...
+
 **⭐ Some Rules To be Followed before plotting...**
 <li>If the output is string or object or Integer like Eg - Male/Female, 0/1, 0/1/2, Yes/No then the output is of <b>Categorical</b> type </li>
 <li>If the output is float values or continuous type values like 2.4,2.6,2.9,3.5,3.8.... then the output is <b>Continuous</b> type </li>
 <li>After deciding the output is of which type now compare the remaing input values is of which types.. Let say if input datatype is int and output datatype is object then it will be Categorical and Categorical.. </li>
-<li><img width="917" height="746" alt="image" src="https://github.com/user-attachments/assets/44eeb3cb-44d2-4a7e-8568-530a1ed529a7" /></li>
 
-### 🧼 Steps for Data Visualization
+**✅ Use These Plots:**
+
+**1️⃣ Continuous vs Categorical**
+
+| Plot Type    | Description                                     | Code Example                                                |
+| ------------ | ----------------------------------------------- | ----------------------------------------------------------- |
+| `boxplot`    | Box and whiskers plot to show spread & outliers | `sns.boxplot(x='category', y='value', data=df)`             |
+| `violinplot` | Adds KDE distribution to boxplot                | `sns.violinplot(x='category', y='value', data=df)`          |
+| `stripplot`  | All data points with some jitter                | `sns.stripplot(x='category', y='value', data=df)`           |
+| `swarmplot`  | Spread points non-overlapping                   | `sns.swarmplot(x='category', y='value', data=df)`           |
+| `barplot`    | Shows mean and confidence intervals             | `sns.barplot(x='category', y='value', data=df)`             |
+| `pointplot`  | Similar to barplot, but with points             | `sns.pointplot(x='category', y='value', data=df)`           |
+| `catplot`    | General interface for categorical plots         | `sns.catplot(x='category', y='value', kind='box', data=df)` |
+| `boxenplot`  | Better for large datasets with many outliers    | `sns.boxenplot(x='category', y='value', data=df)`           |
+
+**2️⃣ Continuous vs Continuous**
+
+| Plot Type     | Description                                   | Code Example                                              |
+| ------------- | --------------------------------------------- | --------------------------------------------------------- |
+| `scatterplot` | Standard 2D plot showing relationship         | `sns.scatterplot(x='age', y='income', data=df)`           |
+| `jointplot`   | Combines scatterplot with marginal histograms | `sns.jointplot(x='age', y='income', data=df, kind='reg')` |
+| `heatmap`     | Shows correlation matrix                      | `sns.heatmap(df.corr(), annot=True, cmap='coolwarm')`     |
+
+**3️⃣ Categorical vs Categorical**
+
+| Plot Type   | Description                                              | Code Example                                                           |
+| ----------- | -------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `countplot` | Number of occurrences per category                       | `sns.countplot(x='education', hue='gender', data=df)`                  |
+| `barplot`   | Mean of a numerical target across categories (works too) | `sns.barplot(x='occupation', y='target_value', hue='gender', data=df)` |
+
+**4️⃣ Univariate Distributions**
+
+| Variable Type | Plot Type   | Code Example                         |
+| ------------- | ----------- | ------------------------------------ |
+| Numerical     | `histplot`  | `sns.histplot(df['age'], kde=True)`  |
+| Numerical     | `kdeplot`   | `sns.kdeplot(df['salary'])`          |
+| Categorical   | `countplot` | `sns.countplot(x='gender', data=df)` |
+| Any           | `displot`   | `sns.displot(df['age'], kde=True)`   |
+
+**5️⃣ All-in-One Plots**
+
+| Plot Type  | Description                                 | Code Example                                                 |
+| ---------- | ------------------------------------------- | ------------------------------------------------------------ |
+| `pairplot` | Automatically plots pairwise relationships  | `sns.pairplot(df, hue='target')`                             |
+| `catplot`  | Versatile wrapper around multiple cat plots | `sns.catplot(x='workclass', y='hours', kind='box', data=df)` |
+
+
+
+
 
 
 
