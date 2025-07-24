@@ -155,6 +155,9 @@ The following common steps were applied across datasets using **NumPy** and **Pa
 | `pairplot` | Automatically plots pairwise relationships  | `sns.pairplot(df, hue='target')`                             |
 | `catplot`  | Versatile wrapper around multiple cat plots | `sns.catplot(x='workclass', y='hours', kind='box', data=df)` |
 
+**💡 Tips**
+- Always use `plt.figure(figsize=(w, h))` to prevent overlapping labels.
+- Use palette options like `"coolwarm"` , `"viridis"` , `"rocket"` to customize color.
 
 
 
